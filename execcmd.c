@@ -3,6 +3,13 @@
 
 #define CHILDPROCESS 0
 
+/**
+ * execute_cmd - executes the given command with the
+ * given arguments in a child process
+ * @args: a double pointer that holds the arguments for
+ * the commandto be executed
+ * Return: 1 (Successful), 0 (Otherwise)
+ */
 int execute_cmd(char **args)
 {
 	pid_t pid;

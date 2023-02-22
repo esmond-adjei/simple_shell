@@ -1,11 +1,10 @@
 #include "shell.h"
 
 /**
- * tokenize_string: breaks down a string into tokens
- * Description - takes a string separates into tokens
- * determined by @TOKEN_DELIM
- * @str: string
- * Return - an array of string tokens
+ * tokenize_string - breaks down a string into tokens
+ * Description - takes a string separates into tokens determined by TOKEN_DELIM
+ * @str: string input containing commands
+ * Return: an array of string tokens
  */
 char **tokenize_string(char *str)
 {

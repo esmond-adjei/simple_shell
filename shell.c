@@ -2,6 +2,10 @@
 #include "shell.h"
 
 /**
+ * main - runs a shell program
+ * Description - A shell program that takes input (command)
+ * with getline, creates a token and executes the command
+ * in a child process
  * Return: 0
  */
 int main(void)
