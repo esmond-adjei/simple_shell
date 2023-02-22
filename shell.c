@@ -11,6 +11,7 @@
 int main(void)
 {
 	size_t len;
+	ssize_t readline;
 	char *inputcmd = NULL;
 	char **tkncommand;
 
@@ -18,7 +19,12 @@ int main(void)
 	{
 		/* read input command as string */
 		printf("($) ");
-		getline(&inputcmd, &len, stdin);
+		readline = getline(&inputcmd, &len, stdin);
+		if (readline == -1)
+		{
+			free(inputcmd);
+			exit(EXIT_SUCCESS);
+		}
 
 		/* tokenize the command string */
 		tkncommand = tokenize_string(inputcmd);
