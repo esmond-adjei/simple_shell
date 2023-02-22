@@ -1,5 +1,11 @@
-# Simple Shell with C [Project from ALX]
+# C - Simple Shell
 
 ## Process
-read, parse, fork, exec, and wait.
-
+- [x] read
+---
+- [x] tokenize
+- [ ] parse
+---
+- [x] fork
+- [x] exec
+- [x] wait
