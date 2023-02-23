@@ -9,7 +9,12 @@
 #include <string.h>
 #include <unistd.h>
 
-char **tokenize_string(char *line);
-int execute_cmd(char **args);
+extern char **tokenize_string(char *line);
+extern int execute_cmd(char **args);
+void shell_exit(char **args);
+extern struct builtinStruct {
+    char *name;
+    void (*func)(char **args);
+};
 
 #endif

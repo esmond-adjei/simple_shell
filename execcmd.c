@@ -15,6 +15,17 @@ int execute_cmd(char **args)
 	pid_t pid;
 	int status;
 
+    struct builtinStruct builtinStructs[] = {
+            {"exit", shell_exit},
+    };
+
+    for (int i = 0; i < sizeof(builtinStructs) / sizeof(builtinStructs[0]); i++) {
+        if (strcmp(args[0], builtinStructs[i].name) == 0) {
+            builtinStructs[i].func(args);
+            return (1);
+        }
+    }
+
 	pid = fork();
 	if (pid == CHILDPROCESS)
 	{
